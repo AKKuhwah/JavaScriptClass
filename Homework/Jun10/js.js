@@ -90,28 +90,32 @@
 
 
 //7
-// function letterS(word){
-//     for (let i = 0; i < word.length; i++){
-//         if (word[i] == "s" || word[i] == "S"){
-//             console.log("yes")
-//             break;
-//         }
-//         else{
-//             console.log("no")
-//         }
-//     }
-// }
-// letterS("string");
+function letterS(word){
+    count = 0;
+    for (let i = 0; i < word.length; i++){
+        if (word[i] == "s" || word[i] == "S"){
+            count += 1
+            break;
+        }
+    }
+    if (count > 0) {
+        console.log("yes")
+    }
+    else {
+        console.log("no")
+    }
+}
+letterS("tsrings");
 
 //8
 
-function summation(num){
-    let total = 0;
-    for (let i = 1; i <= num; i++){
-        total = i + total
-    }
-    console.log(total)
+// function summation(num){
+//     let total = 0;
+//     for (let i = 1; i <= num; i++){
+//         total = i + total
+//     }
+//     console.log(total)
 
-}
+// }
 
-summation(4);
+// summation(4);
