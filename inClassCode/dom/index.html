@@ -1,6 +1,19 @@
 <html lang="en">
     <head>
         <title>So Many Kale Recipes</title>
+        <style>
+            .nav-heading {
+                font-size: 48px;
+                color: navy;
+                border: 1px forestgreen dotted;
+            }
+            button {
+                background-color: forestgreen;
+                color: white;
+                font-weight: bold;
+                padding: 5px;
+            }
+        </style>
     </head>
     <body>
         <header id="page-banner">
@@ -10,9 +23,17 @@
             <p>
                 Do you love to cook with <a href="#">kale</a>?
             </p>
+            <img id="kale-image" src="kale.jpg" alt="picture of kale" width="240">
             <div id="div1">This, of course, is div 1.</div>
-            <div class="cursive">Yeah, well <em>this</em> is div 2!</div>
-            <div id="dive3">Ignore those dudes. Welcome to div 3!</div>
+            <div class="cursive" id="div2">Yeah, well <em>this</em> is div 2!</div>
+            <div id="div3">Ignore those dudes. Welcome to div 3!</div>
+            <button id="my-button" type="button">Click me to add some text, below</button>
+            <div id="my-div"></div>
+            <button id="my-button2" type="button">Click me to add more text</button>
+            <div id="key-request">Type a key: </div>
+            <input id="key-input" type="text">
+            <div id="key-response">Here is the code of the key you pressed</div> 
+            <div id="key-output"></div>        
         </main>
         
         <script src="js.js"></script>

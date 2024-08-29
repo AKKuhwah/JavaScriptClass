@@ -1,28 +1,26 @@
-//1
-// cardsArray = ["king", "queen", "jack", "ace", "nine", "d'three", "three"]
-// cardsArray.copyWithin(0, 6);
-// cardsArray.pop();
-// cardsArray.splice(cardsArray.length, 0, "ten", "eight", "seven", "six","five","four","two");
+//1 FIX THIS -kuh
+let cardsArray = ["king", "queen", "jack", "ace", "nine", "four", "three"]
+cardsArray.unshift(cardsArray.splice(3, 1)[0]);
+cardsArray.splice(4, 0, "ten");
+cardsArray.splice(6, 0, "eight", "seven", "six", "five");
+cardsArray.push('two')
 
+for (let i = 0; i < cardsArray.length; i++){
+    cardsArray.splice(i, 1, cardsArray[i].toUpperCase())
+}
 
-
-// for (let i = 0; i < cardsArray.length; i++){
-//     cardsArray.splice(i, 1, cardsArray[i].toUpperCase())
-// }
-
-// console.log(cardsArray);
+console.log(cardsArray);
 
 
 //2
 // const num = [5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5]
 
 // let new_num = num.filter(num => num>0)
-
-// let result = new_num.reduce((accumulator, currentValue)=>{
+// .reduce((accumulator, currentValue)=>{
 //     return accumulator + currentValue;
 // }, 0);
 
-// console.log(result);
+// console.log(new_num);
 
 
 //3
@@ -51,12 +49,12 @@
 
 //4
 
-const programWords = ["web","code","function","method", "http", "html", "function", "java","rust"]
+// const programWords = ["web","code","function","method", "http", "html", "function", "java","rust"]
 
-programWords.fill("python", 2, 5);
-console.log(programWords);
-index_position = programWords.lastIndexOf("function", programWords.length-1);
-console.log(index_position);
-look_up = programWords.includes("java" && "css", -1);
-console.log(look_up);
+// programWords.fill("python", 2, 5);
+// console.log(programWords);
+// index_position = programWords.lastIndexOf("function", programWords.length-1);
+// console.log(index_position);
+// look_up = programWords.includes("java" && "css", -1);
+// console.log(look_up);
 
