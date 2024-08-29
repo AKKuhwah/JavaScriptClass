@@ -32,6 +32,8 @@ let betting = () => {
         alert("please enter a number between 2 and 500!")
         return userDeckQuestion();
     } else {
+        totalMoney-=userBet;
+        document.getElementById('pot-size').innerText = totalMoney;
         return userBet;
     }
 }
@@ -189,22 +191,20 @@ function stay(){
         let message = '';
         if (yourSum > 21){
             message = 'You Lose';
-            totalMoney -= betAmount;
         }
         else if (dealerSum > 21){
             message = 'You Win';
-            totalMoney += betAmount;
+            totalMoney = totalMoney + (betAmount*2)
         }
         else if (yourSum == dealerSum){
             message = 'Tie';
         }
         else if (yourSum > dealerSum){
             message = 'You Win';
-            totalMoney += betAmount;
+            totalMoney = totalMoney + (betAmount*2);
         }
         else if (dealerSum > yourSum){
             message = 'You Lose';
-            totalMoney -= betAmount;
         }
     
         document.getElementById('dealer-sum').innerText = dealerSum;
@@ -240,6 +240,7 @@ function hit(){
 
     if(reduceAce(yourSum, yourAceCount) > 21){
         canHit = false;
+        let colorChange = document.getElementById('hit').classList.add('colorChange');
     }
 
     //double down
@@ -311,6 +312,9 @@ function newgame(){
     doubleDownButton.textContent = 'Double Down';
     document.getElementById('buttonSpot').appendChild(doubleDownButton);
     doubleDownButton.addEventListener('click', doubleDown);
+
+    //color change
+    document.getElementById('hit').classList.remove('colorChange');
 
     startGame();
 }
